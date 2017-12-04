@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.12.3)  3 DEC 2017 18:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.12.3)  3 DEC 2017 18:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -627,8 +627,7 @@ Package: gensymb 2003/07/02 v1.0 (WaS)
 )
 (f:/texlive/2017/texmf-dist/tex/latex/tools/dcolumn.sty
 Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
-)
-No file rod_ball_lab.aux.
+) (./rod_ball_lab.aux)
 \openout1 = `rod_ball_lab.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
@@ -643,6 +642,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
 LaTeX Font Info:    ... okay on input line 66.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
 LaTeX Font Info:    ... okay on input line 66.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -777,8 +777,8 @@ $[]\OT1/cmr/m/n/12 07516$
 {f:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 (./rod_ball_lab.aux) ) 
 Here is how much of TeX's memory you used:
- 5464 strings out of 492985
- 80296 string characters out of 6136284
+ 5466 strings out of 492985
+ 80330 string characters out of 6136284
  159810 words of memory out of 5000000
  8938 multiletter control sequences out of 15000+600000
  10827 words of font info for 39 fonts, out of 8000000 for 9000
@@ -794,7 +794,7 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><f:/texlive/2017/texmf-dist
 amsfonts/cm/cmss17.pfb><f:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy10.pfb><f:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.
 pfb>
-Output written on rod_ball_lab.pdf (2 pages, 109356 bytes).
+Output written on rod_ball_lab.pdf (2 pages, 109342 bytes).
 PDF statistics:
  51 PDF objects out of 1000 (max. 8388607)
  36 compressed objects within 1 object stream
