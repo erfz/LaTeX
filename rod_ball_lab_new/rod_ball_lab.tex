@@ -89,7 +89,7 @@ To determine the distance the racquetball will land from the point of launch as 
     $m_{rod}$ (rod mass) & 26.54 & g \\ \hline
     $m_{weight}$ (weight mass) & 75.16 & g \\ \hline
     $\theta_i$ (initial rod angle) & 60 & \degree \\ \hline
-    $\phi$ (track angle wrt horizontal) & 0.5 & \degree \\ \hline	
+    $\phi$ (track angle wrt horizontal) & 1 & \degree \\ \hline	
     \end{tabular}
 \end{center}
 
@@ -103,30 +103,29 @@ Thus, $I_{rm} \approx 0.01\, kgm^2$.
 
 \subsection{Angular speed of rod on collision}
 
-From energy conservation, we have
+From energy conservation:
 $$mgl_{cm}(1-cos\,\theta_i) = \frac{1}{2}I_{rm}\omega_i^2.$$
 Thus, $\omega_i \approx 5.46\, rad/s$.
 
 \subsection{Angular momentum}
 
-Let counterclockwise be positive by convention. We have
-$$L_{rm} = I_{rm}\omega_i - Ndt = I_{rm}\omega_f$$
-$$L_b = -NRt = -MRv - I_b v/R$$
+Let counterclockwise be positive by convention. We have:
+$$L_{rm} = I_{rm}\omega_i - Ndt = I_{rm}\omega_f,$$
+$$L_b = -NRt = -MRv - I_b v/R,$$
 where $N$ is the normal force between the ball and rod-mass, t is the collision time, $I_b = \frac{2}{5}MR^2$ is the MOI of the ball about its COM, $v$ is the linear velocity of the ball's COM, and $d$ is the same as above.
 
 Here, the angular momentum of the rod-mass $L_{rm}$ is taken wrt the hinge; the angular momentum of the ball $L_b$ is taken wrt its contact point on the track. This eliminates any friction terms that would otherwise be present in our expressions.
 
-If we combine these expressions, we get
+Combining these equations, it follows that
 $$I_{rm} \omega_i = I_{rm} \omega_f + Mvd + I_b vd/R^2.$$
 
 \subsection{Coefficient of Restitution}
 
 We require another equation to actually solve for $\omega_f$. From a table of CORs, we will estimate that the collision has a COR of $e = 0.7$.
-This means that $$e = \frac{v_{tf} - v}{0-v_{ti}} = 0.7$$
+This means that: $$e = \frac{v_{tf} - v}{0-v_{ti}} = 0.7,$$
 where $v_{ti}$ and $v_{tf}$ are the initial and final linear velocities of the rod-mass contact point with the ball, respectively, and $v$ is the ball's translational velocity.
-Since the rod-mass contact point is a distance $d$ from the hinge, $v_{ti} = \omega_i d$ and $v_{tf} = \omega_f d$.
 
-Combining, we get that $$v = d(0.7\omega_i + \omega_f).$$
+Since the rod-mass contact point is a distance $d$ from the hinge, $v_{ti} = \omega_i d$ and $v_{tf} = \omega_f d$. Combining, we get that $$v = d(0.7\omega_i + \omega_f).$$
 
 \subsection{Ball velocity (right after collision)}
 
@@ -138,16 +137,16 @@ We reuse the energy conservation expression and find that $\omega_f \approx 0.1\
 
 \subsection{Ball velocity (before bump)}
 
-By Newton's Second Law,
-$$M \frac{dv}{dt} = -F_D - Mgsin\,\phi$$
+By Newton's Second Law:
+$$M \frac{dv}{dt} = -F_D - Mgsin\,\phi,$$
 where $F_D$ is the drag force and $Mgsin\,\phi$ is component of gravity parallel to the track.
 
-We know that $F_D = \frac{1}{2}\rho v^2 C_D A$. The density of air at room temperature $\rho$ is $\approx 1.2\,kg/m^3$, the drag coefficient $C_D$ of the ball is $\approx 0.5$, and the cross-sectional area $A$ of the ball is $\pi R^2$.
+The drag force $F_D = \frac{1}{2}\rho v^2 C_D A$. The density of air at room temperature $\rho$ is $\approx 1.2\,kg/m^3$, the drag coefficient $C_D$ of the ball is $\approx 0.5$, and the cross-sectional area $A$ of the ball is $\pi R^2$.
 Thus, $F_D \approx 0.0008v^2$.
 
-Solving the differential equation with the condition $v(0) = 1.36$, we get that $$v(t) = 2.95tan(.432 - .0290t).$$
+Solving the differential equation with the condition $v(0) = 1.36$ and $x(0) = 0$: $$v(t) = 4.18tan(.315 - .04t),$$ $$x(t) = 105ln(cos(.315 - .04t)) + 5.3.$$
 
-We will guess, from the magnitude of velocities present and the track length, that it takes $\approx 2\,s$ to reach the bump; its translational velocity right before the bump $v_{bi} \approx 1.16\,m/s$.
+The distance from the collision point to the point is $\approx 1\, m$; setting $x(t) = 1$ indicates that it takes $\approx 0.77\,s$ for the ball to travel this distance. Therefore, its translational velocity right before the bump $v_{bi} \approx 1.22\,m/s$.
 
 \subsection{Ball velocity (after bump)}
 
@@ -158,19 +157,19 @@ To simplify calculations, the total kinetic energy $K$ of the ball is $K = K_{li
 By energy conservation,
 $$K_i = K_f + Mg(h_f - h_i)$$
 since the ball goes up a height of $h_f - h_i$ during the bump.
-Solving for the translational velocity right after the bump, we get that $v_{bf} \approx 0.93\,m/s$.
+Solving for the translational velocity right after the bump, we get that $v_{bf} \approx 1.0\,m/s$.
 
 \subsection{Ball velocity (right before projectile motion)}
 
 Now, we will account for drag and the incline once again.
-Solving the differential equation again with the new condition $v(0) = 0.93$, we get that $$v(t) = 2.95tan(.305 - .0290t).$$
+Solving the differential equation again with the new conditions $v(0) = 1.0$ and $x(0) = 0$: $$v(t) = 4.18tan(.235 - .04t),$$ $$x(t) = 105ln(cos(.235 - .04t)) + 2.9.$$
 
-We make another guess that this portion of the track takes $\approx 3\, s$ to traverse. Finally, we get that the translational velocity right before projectile motion $u \approx 0.65\, m/s$.
+We will estimate that the second portion of the track is also $\approx 1\, m$. Finally, we get that the translational velocity right before projectile motion $u \approx 0.8\, m/s$.
 
 \subsection{Ball Travel Distance}
 
 The travel time of the ball $t$ is given by
 $$-H = -\frac{1}{2}gt^2 \implies t \approx 0.45\,s.$$
-Thus, the ball will travel a distance $ut \approx 0.294\,m = 29.4\,cm$ off the table.
+Thus, the ball will travel a distance $ut \approx 36\,cm$ off the table.
 
 \end{document}

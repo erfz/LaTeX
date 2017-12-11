@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.12.3)  10 DEC 2017 19:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.12.3)  10 DEC 2017 21:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -788,7 +788,7 @@ Here is how much of TeX's memory you used:
  8938 multiletter control sequences out of 15000+600000
  10827 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,11n,43p,281b,198s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,11n,43p,281b,204s stack positions out of 5000i,500n,10000p,200000b,80000s
 <f:/texlive/2017/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmmi12.pfb><f:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
 i6.pfb><f:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><f:
@@ -799,7 +799,7 @@ type1/public/amsfonts/cm/cmss12.pfb><f:/texlive/2017/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmss17.pfb><f:/texlive/2017/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmsy10.pfb><f:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 sy8.pfb>
-Output written on rod_ball_lab.pdf (4 pages, 119726 bytes).
+Output written on rod_ball_lab.pdf (4 pages, 120329 bytes).
 PDF statistics:
  57 PDF objects out of 1000 (max. 8388607)
  40 compressed objects within 1 object stream
