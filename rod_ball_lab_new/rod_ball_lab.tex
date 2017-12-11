@@ -125,6 +125,7 @@ We require another equation to actually solve for $\omega_f$. From a table of CO
 This means that $$e = \frac{v_{tf} - v}{0-v_{ti}} = 0.7$$
 where $v_{ti}$ and $v_{tf}$ are the initial and final linear velocities of the rod-mass contact point with the ball, respectively, and $v$ is the ball's translational velocity.
 Since the rod-mass contact point is a distance $d$ from the hinge, $v_{ti} = \omega_i d$ and $v_{tf} = \omega_f d$.
+
 Combining, we get that $$v = d(0.7\omega_i + \omega_f).$$
 
 \subsection{Ball velocity (right after collision)}
@@ -153,6 +154,7 @@ We will guess, from the magnitude of velocities present and the track length, th
 We will neglect drag here because the bump was relatively short.
 However, a significant fraction of kinetic energy is transformed into gravitational potential energy.
 To simplify calculations, the total kinetic energy $K$ of the ball is $K = K_{linear} + K_{rotation} = \frac{1}{2}Mv^2 + \frac{1}{2}I_b(\frac{v}{R})^2 = \frac{7}{10}Mv^2$ for an arbitrary translational velocity $v$.
+
 By energy conservation,
 $$K_i = K_f + Mg(h_f - h_i)$$
 since the ball goes up a height of $h_f - h_i$ during the bump.
@@ -162,6 +164,7 @@ Solving for the translational velocity right after the bump, we get that $v_{bf}
 
 Now, we will account for drag and the incline once again.
 Solving the differential equation again with the new condition $v(0) = 0.93$, we get that $$v(t) = 2.95tan(.305 - .0290t).$$
+
 We make another guess that this portion of the track takes $\approx 3\, s$ to traverse. Finally, we get that the translational velocity right before projectile motion $u \approx 0.65\, m/s$.
 
 \subsection{Ball Travel Distance}
