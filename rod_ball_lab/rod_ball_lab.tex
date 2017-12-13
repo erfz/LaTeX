@@ -1,0 +1,209 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[12pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{dcolumn}
+\newcolumntype{d}[1]{D{.}{\cdot}{#1}}
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\title{Rod Hitting Ball Lab}
+\author{Jason Guo}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+
+\section{Objective}
+
+To determine the distance the racquetball will land from the point of launch as well as the angle the launcher will rise.
+
+\section{Procedure}
+
+Even without the proper equations, the core data needed to describe the collision was obvious.
+
+The rod-mass was rotating; we would clearly need the length of the bar, the height of the weight, and the length of the rod portion above the hinge.
+This would all be necessary to calculate the rod-mass's MOI.
+
+Also, the bump in the track would clearly result in a height change for the ball. We measured the height of the track before and after the bump (relative to the table) to use in energy conservation.
+
+The height of the final portion of the track relative to the floor was also needed for the displacement calculation.
+
+And, of course, we massed the ball, the rod, and the weight. The ball's radius was also an obvious measurement, as it is needed to calculate its MOI.
+
+The initial rod angle was given. We also measured the angle that the track was tilted at; although I believed this not to be significant at the time, it turned out to have a measurable effect.
+
+In terms of calculations, I have explained each step below in their logical order.
+
+\section{Data}
+
+\begin{center}
+    \begin{tabular}{ | l | d{1} | l | }
+    \hline
+    Quantity & \mathrm{Value} & Unit \\ \hline
+    $D$ (track length) & 200 & cm \\ \hline
+    $L$ (rod length) & 38.1 & cm \\ \hline
+    $l_{top}$ (distance from axis to top of rod) & 2.5 & cm \\ \hline
+    $l_{weight}$ (distance from bottom of rod to top of weight) & 2 & cm \\ \hline
+    $H$ (final track height above ground) & 98 & cm \\ \hline
+    $h_i$ (initial track height) & 9 & cm \\ \hline
+    $h_f$ (final track height) & 12.4 & cm \\ \hline
+    $R$ (ball radius) & 2.85 & cm \\ \hline
+    $M$ (ball mass) & 81.55 & g \\ \hline
+    $m$ (total rod \& weight mass) & 101.7 & g \\ \hline
+    $m_{rod}$ (rod mass) & 26.54 & g \\ \hline
+    $m_{weight}$ (weight mass) & 75.16 & g \\ \hline
+    $\theta_i$ (initial rod angle) & 60 & \degree \\ \hline
+    $\phi$ (track angle wrt horizontal) & 1 & \degree \\ \hline	
+    \end{tabular}
+\end{center}
+
+\section{Calculations}
+
+\subsection{MOI of rod-mass}
+
+Let $I_{rm}$ be the MOI of the rod-mass about its hinge. The distance $d$ from the axis to the weight's COM $= L - l_{top} - \frac{l_{weight}}{2}$.
+$$I_{rm} = \frac{1}{12}m_{rod}L^2 + m_{rod}(\frac{L}{2} - l_{top})^2 + m_{weight}d^2.$$
+Thus, $I_{rm} \approx 0.01\, kgm^2$.
+
+\subsection{Distance from axis to rod-mass COM}
+
+The COM of the rod alone is a distance $L/2 - l_{top}$ from the hinge. The COM of the weight is a distance $L - l_{top} - l_{weight}/2$ from the hinge.
+So, $ml_{cm} = m_{rod} (L/2 - l_{top}) + m_{weight} (L - l_{top} - l_{weight}/2) \implies l_{cm} = 0.299\,m$.
+
+\subsection{Angular speed of rod on collision}
+
+From energy conservation:
+$$mgl_{cm}(1-cos\,\theta_i) = \frac{1}{2}I_{rm}\omega_i^2.$$
+Thus, $\omega_i \approx 5.46\, rad/s$.
+
+\subsection{Angular momentum}
+
+Let counterclockwise be positive by convention. We have:
+$$L_{rm} = I_{rm}\omega_i - Ndt = I_{rm}\omega_f,$$
+$$L_b = -NRt = -MRv - I_b v/R,$$
+where $N$ is the normal force between the ball and rod-mass, t is the collision time, $I_b = \frac{2}{5}MR^2$ is the MOI of the ball about its COM, $v$ is the linear velocity of the ball's COM, and $d$ is the same as above.
+
+Here, the angular momentum of the rod-mass $L_{rm}$ is taken wrt the hinge; the angular momentum of the ball $L_b$ is taken wrt its contact point on the track. This eliminates any friction and hinge reaction force terms that would otherwise be present in our expressions.
+
+Combining these equations, it follows that
+$$I_{rm} \omega_i = I_{rm} \omega_f + Mvd + I_b vd/R^2.$$
+
+\subsection{Coefficient of Restitution (e)}
+
+We require another equation to actually solve for $\omega_f$. From a table of CORs, we will estimate that the collision has a COR of $e \approx 0.65$. I reason that the ball used will have a COR less than that of a tennis ball (0.7) but more than a wooden ball (0.6); I will use the average of the two. I also assume that the metal weight is perfectly rigid.
+This means that: $$e = \frac{v_{tf} - v}{0-v_{ti}} = 0.65,$$
+where $v_{ti}$ and $v_{tf}$ are the initial and final linear velocities of the rod-mass contact point with the ball, respectively, and $v$ is the ball's translational velocity.
+
+Since the rod-mass contact point is a distance $d$ from the hinge, $v_{ti} = \omega_i d$ and $v_{tf} = \omega_f d$. Combining, we get that $$v = d(0.65\omega_i + \omega_f).$$
+
+\subsection{Ball velocity (right after collision)}
+
+Substituting the COR expression into angular momentum conservation, we get that $w_f \approx 0.26\,rad/s$ and $v \approx 1.32\,m/s$.
+
+\subsection{Final rod angle}
+
+We reuse the energy conservation expression from subsection 3.3 and find that $\omega_f \approx 0.26\,rad/s$ corresponds to $\theta_f \approx 3\degree$.
+
+\subsection{Ball velocity (before bump)}
+
+By Newton's Second Law:
+$$M \frac{dv}{dt} = -F_D - Mgsin\,\phi,$$
+where $F_D$ is the drag force and $Mgsin\,\phi$ is component of gravity parallel to the track.
+
+The drag force $F_D = \frac{1}{2}\rho v^2 C_D A$. The density of air at room temperature $\rho$ is $\approx 1.2\,kg/m^3$, the drag coefficient $C_D$ of the ball is $\approx 0.5$, and the cross-sectional area $A$ of the ball is $\pi R^2$.
+Thus, $F_D \approx 0.0008v^2$.
+
+Solving the differential equation with the condition $v(0) = 1.32$ and $x(0) = 0$: $$v(t) = 4.18tan(.306 - .04t),$$ $$x(t) = 105ln(cos(.306 - .04t)) + 5.$$
+
+The distance from the collision point to the point is $\approx 1\, m$; setting $x(t) = 1$ indicates that it takes $\approx 0.8\,s$ for the ball to travel this distance. Therefore, its translational velocity right before the bump $v_{bi} \approx 1.17\,m/s$.
+
+\subsection{Ball velocity (after bump)}
+
+We will neglect drag here because the bump was relatively short.
+However, a significant fraction of kinetic energy is transformed into gravitational potential energy.
+To simplify calculations, the total kinetic energy $K$ of the ball is $K = K_{linear} + K_{rotation} = \frac{1}{2}Mv^2 + \frac{1}{2}I_b(\frac{v}{R})^2 = \frac{7}{10}Mv^2$ for an arbitrary translational velocity $v$.
+
+By energy conservation,
+$$K_i = K_f + Mg(h_f - h_i)$$
+since the ball goes up a height of $h_f - h_i$ during the bump.
+Solving for the translational velocity right after the bump, we get that $v_{bf} \approx 0.94\,m/s$.
+
+\subsection{Ball velocity (right before projectile motion)}
+
+Now, we will account for drag and the incline once again.
+Solving the differential equation again with the new conditions $v(0) = 0.94$ and $x(0) = 0$: $$v(t) = 4.18tan(.221 - .04t),$$ $$x(t) = 105ln(cos(.221 - .04t)) + 2.6.$$
+
+We will estimate that the second portion of the track is also $\approx 1\, m$. This portion of the track takes $\approx 1.2\,s$ to traverse, as given by $x(t)$. Finally, we get that the translational velocity right before projectile motion $u \approx 0.73\, m/s$.
+
+\subsection{Ball Travel Distance}
+
+The travel time of the ball $t$ is given by
+$$-H = -\frac{1}{2}gt^2 \implies t \approx 0.45\,s.$$
+Thus, the ball will travel a distance $ut \approx 33\,cm$ off the table.
+
+\section{Error Analysis}
+
+The measured displacement of the ball was $25\,cm$. This corresponds to a percent error of $$|33 - 25|/33 * 100\% = 24\%.$$
+
+First, there is certainly error associated with the assumptions I have made. Our group did not think to measure the COR; I was forced to make an educated guess using data found online. I suspect that the collision had a lower COR than I used, considering that the measured displacement was smaller.
+
+I also assumed that the distance from collision to bump and bump to track end were each $1\,m$. I got this from just using half the track length $D$ for each segment. Obviously, this is a very  imprecise assumption; we should have measured it. The distance that the ball travels in each segment affects how much work is done by air resistance. If the first segment (collision to bump) was disproportionately long compared to the second segment (bump to track end), it would end up with less horizontal velocity and thus displacement than vice-versa. This is because the force due to air resistance is proportional to the square of velocity (or to velocity alone given the low speeds here). This shows that my assumption will have a clear effect on the calculations, and that the lengths relative to one another are important.
+
+Speaking of air resistance, I did quantitatively account for it here. That being said, it is not like I actually measured the air density or drag coefficient of the ball. The numbers I used are from assuming that the ball is perfectly spherical and that the room was around $70\degree F$. I suspect this isn't as significant as my assumptions for COR, but there is still going to be error here. In addition, I didn't account for air resistance in the rotation of the rod-mass or while the ball went over the bump. I deemed these to have a negligible effect. Nonetheless, they would still act to decrease the displacement measured since less energy would end up in the ball right before projectile motion.
+
+Now, there is going to be error as a result of the ball not traveling perfectly parallel to the track. This results in some of the velocity being perpendicular to the track. This also causes the track to apply a normal force to center the ball as it travels; energy is lost lost from the ball as a result. Both these effects make the measured displacement lower.
+
+\end{document}
