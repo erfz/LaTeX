@@ -51,6 +51,7 @@
 
 \usepackage{mathtools}
 \usepackage{gensymb}
+\usepackage{hyperref}
 \usepackage{dcolumn}
 \newcolumntype{d}[1]{D{.}{\cdot}{#1}}
 
@@ -205,5 +206,11 @@ I also assumed that the distance from collision to bump and bump to track end we
 Speaking of air resistance, I did quantitatively account for it here. That being said, it is not like I actually measured the air density or drag coefficient of the ball. The numbers I used are from assuming that the ball is perfectly spherical and that the room was around $70\degree F$. I suspect this isn't as significant as my assumptions for COR, but there is still going to be error here. In addition, I didn't account for air resistance in the rotation of the rod-mass or while the ball went over the bump. I deemed these to have a negligible effect. Nonetheless, they would still act to decrease the displacement measured since less energy would end up in the ball right before projectile motion.
 
 Now, there is going to be error as a result of the ball not traveling perfectly parallel to the track. This results in some of the velocity being perpendicular to the track. This also causes the track to apply a normal force to center the ball as it travels; energy is lost lost from the ball as a result. Both these effects make the measured displacement lower.
+
+\section{Sources}
+
+COR: \url{https://hypertextbook.com/facts/2006/restitution.shtml}
+
+\noindent Drag coefficient: \url{https://www.engineeringtoolbox.com/drag-coefficient-d_627.html} \& \url{https://en.wikipedia.org/wiki/Drag_(physics)}
 
 \end{document}
